@@ -16,15 +16,37 @@ else if(time>= 7 && time>=13){
 else if(time>= 0 && time>=7){
     wish = "Early Morning";
 }
-var time2 = today.getHours()-12+ ":" + today.getMinutes();
-console.log(time,time2);
-document.getElementById("time").innerHTML = time2;
 document.getElementById("wish").innerHTML = wish;
 var value = Math.random()*100;
 value = Math.round(value);
 var url = `https://picsum.photos/2000/1900?random=${value}`
 document.body.style.backgroundImage = `url(${url})`;
 
-document.getElementById('onClick').addEventListener("click", function(){
-    location.replace("https://www.github.com/programmerRhythm");
-})
+
+function clock() {
+    var hours = document.getElementById("hours");
+    var minutes = document.getElementById("minutes");
+    var seconds = document.getElementById("seconds");
+    var phase = document.getElementById("phase");
+
+    var h = new Date().getHours();
+    var m = new Date().getMinutes();
+    var s = new Date().getSeconds();
+    var am = "AM";
+
+    if (h > 12) {
+        h = h - 12;
+        var am = "PM";
+    }
+
+    h = h < 10 ? "0" + h : h;
+    m = m < 10 ? "0" + m : m;
+    s = s < 10 ? "0" + s : s;
+
+    hours.innerHTML = h;
+    minutes.innerHTML = m;
+    seconds.innerHTML = s;
+    phase.innerHTML = am;
+}
+
+var interval = setInterval(clock, 1000);
