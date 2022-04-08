@@ -4,16 +4,16 @@ let wish = "";
 if(time>=21 && time>= 18){
     wish = "Night";
 }
-else if(time>= 18 && time>=21){
+else if(time>= 18 && time<=21){
     wish = "Evening";
 }
-else if(time>= 13 && time>=18){
+else if(time>= 13 && time<=18){
     wish = "Afternoon";
 }
-else if(time>= 7 && time>=13){
+else if(time>= 7 && time<=13){
     wish = "Morning";
 }
-else if(time>= 0 && time>=7){
+else if(time>= 0 && time<=7){
     wish = "Early Morning";
 }
 document.getElementById("wish").innerHTML = wish;
