@@ -16,7 +16,7 @@ else if(time>= 18 && time<=19){
 }
 else if(time>= 15 && time<=18){
     document.body.style.backgroundImage = "url('5.jpeg')";
-    wish = "On going Afternoon";
+    wish = "Early Afternoon";
 }
 else if(time>= 12 && time<=15){
     document.body.style.backgroundImage = "url('4.jpeg')";
@@ -68,3 +68,25 @@ function clock() {
 }
 
 var interval = setInterval(clock, 1000);
+
+const prompts = () => prompt('Enter your name');
+
+const takeName = document.getElementById("names");
+
+const nameValue = localStorage.getItem("name");
+ 
+const changeName = document.getElementById("changeName")
+
+changeName.addEventListener('click', function () {
+    takeName.innerHTML = prompts();
+    localStorage.setItem('name', takeName.innerHTML);
+})
+
+if(nameValue){
+    takeName.innerHTML = nameValue;
+}
+else{
+    takeName.innerHTML = prompts();
+    localStorage.setItem('name',prompts())
+}
+

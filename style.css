@@ -1,5 +1,7 @@
 #time{
     color: rgb(255, 255, 255);
+    text-align: center;
+
 }
 #name{
     font-size: 4.5em;
@@ -15,9 +17,7 @@
 }
 
 
-#time{
-    text-align: center;
-}
+
 .btns{
     text-align: center;
     padding-top: 20px;
