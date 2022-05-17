@@ -87,6 +87,6 @@ if(nameValue){
 }
 else{
     takeName.innerHTML = prompts();
-    localStorage.setItem('name',prompts())
+    localStorage.setItem('name', takeName.innerHTML)
 }
 
