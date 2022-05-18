@@ -16,7 +16,23 @@
     font-weight: 1200;
 }
 
+#getMood{
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.484);
+    border: none;
+    border-radius: 0.5em;
+    /* height: 35px; */
+    padding: 10px;
+    color: #fff;
+}
+::placeholder { 
+    color: rgba(225, 217, 217, 0.772);
+    opacity: 1;
+  }
 
+button {
+    padding: 10px;
+}
 
 .btns{
     text-align: center;

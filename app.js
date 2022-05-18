@@ -90,3 +90,21 @@ else{
     localStorage.setItem('name', takeName.innerHTML)
 }
 
+const submitMode = document.getElementById("sum").addEventListener('click', function () {
+    const qna = document.getElementById("qna");
+    const getMode = document.getElementById("getMood").value;
+    console.log(getMode);
+    if(getMode == 'good' || getMode == 'fine' || getMode == 'better' || getMode == 'alhamdulillah'){
+        qna.innerHTML = 'I am glad to hear that you are having a good day 😊'
+    }
+    else if(getMode == 'bad'){
+        qna.innerHTML = `It makes me sad to hear that you're having a bad day!`
+    }
+    else if(getMode == 'not bad'){
+        qna.innerHTML = 'Ohhh....I wish you spent a good day'
+    }
+    else if(getMode == 'normal'){
+        qna.innerHTML = ''
+    }
+
+})
