@@ -108,3 +108,19 @@ const submitMode = document.getElementById("sum").addEventListener('click', func
     }
 
 })
+
+/* <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1brdXRYmPf5?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> */
+
+
+// https://open.spotify.com/embed/playlist/37i9dQZF1EQncLwOalG3K7?utm_source=generator
+
+const addPlaylist = document.getElementById("addPlaylist").addEventListener("click", function(){
+    const listValue = prompt('Enter Playlist Value');
+    const row = document.getElementById('row');
+    const show2 = document.createElement('div');
+        show2.className = `col-4`;
+        show2.innerHTML = `
+        <iframe style="border-radius:12px" src=${listValue} width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      `
+        row.appendChild(show2);
+});
