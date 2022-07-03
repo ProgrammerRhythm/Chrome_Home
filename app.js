@@ -3,35 +3,35 @@ var time = today.getHours();
 let wish = "";
 if(time>=21 && time>= 18){
     wish = "Night";
-    document.body.style.backgroundImage = "url('8.jpeg')";
+    document.body.style.backgroundImage = "url('./Img/8.jpeg')";
 }
 else if(time>= 19 && time<=21){
     wish = "Evening";
-    document.body.style.backgroundImage = "url('7.jpeg')";
+    document.body.style.backgroundImage = "url('./Img/7.jpeg')";
 
 }
 else if(time>= 18 && time<=19){
-    document.body.style.backgroundImage = "url('6.jpeg')";
+    document.body.style.backgroundImage = "url('./Img/6.jpeg')";
     wish = "Afternoon";
 }
 else if(time>= 15 && time<=18){
-    document.body.style.backgroundImage = "url('5.jpeg')";
+    document.body.style.backgroundImage = "url('./Img/5.jpeg')";
     wish = "Early Afternoon";
 }
 else if(time>= 12 && time<=15){
-    document.body.style.backgroundImage = "url('4.jpeg')";
+    document.body.style.backgroundImage = "url('./Img/4.jpeg')";
     wish = "Morning";
 }
 else if(time>= 8 && time<=12){
-    document.body.style.backgroundImage = "url('3.jpeg')";
+    document.body.style.backgroundImage = "url('./Img/3.jpeg')";
     wish = "Morning";
 }
 else if(time>= 5 && time<=8){
-    document.body.style.backgroundImage = "url('2.jpeg')";
+    document.body.style.backgroundImage = "url('./Img/2.jpeg')";
     wish = "Early Morning";
 }
 else if(time>= 0 && time<=5){
-    document.body.style.backgroundImage = "url('1.jpeg')";
+    document.body.style.backgroundImage = "url('./Img/1.jpeg')";
     wish = "Early Morning";
 }
 document.getElementById("wish").innerHTML = wish;
